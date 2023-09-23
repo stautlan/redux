@@ -19,15 +19,20 @@ const initialState: IState = {
     isEditMode: false,
 }*/
 
-/*export const reducer = createReducer(initialState, (builder) => {
+/*export const reducer1 = createReducer(initialState, (builder) => {
     builder
-    .addCase(addItem, (state, action: PayloadAction<Item>) => {
+    .addCase(addItem, (state, action: PayloadAction<IState>) => {
         state.elements = [...state.elements, action.payload]; //.push(action.payload);
     })
-    .addCase()
+    .addCase(updateItem, (state, action) => {
+        state.elements.map((item) => action.payload.id ? [...item, action.payload.text] : item);
+    })
+    .addCase(deleteItem, (state, action) => {
+
+    })
 }*/
 
-export const reducer = (state: IState = initialState, action: Actions): State => {
+export const reducer = (state: IState = initialState, action: Actions) /*: IState*/ => {
     switch (action.type) {
         case ActionTypes.ADD_ELEMENT:
         return {

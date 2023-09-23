@@ -80,7 +80,6 @@ export const Form = () => { //: React.FC = () => {
     };
 
     const handleEditItem = (id: string, text: string) => {
-        //debugger
       dispatch(updateItem(id, text));
     };
 
@@ -118,5 +117,3 @@ export const Form = () => { //: React.FC = () => {
         </div>
       );
 }
-
-//export default Form;
