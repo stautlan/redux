@@ -1,10 +1,3 @@
-//import { createAction } from '@reduxjs/toolkit';
-
-/*export const addItem = createAction("ADD_ELEMENT");
-export const updateItem = createAction("UPDATE_ELEMENT");
-export const deleteItem = createAction("DELETE_ELEMENT");*/
-
-//---
 export enum ActionTypes {
     ADD_ELEMENT = "ADD_ELEMENT",
     UPDATE_ELEMENT = "UPDATE_ELEMENT",
