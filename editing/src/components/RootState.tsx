@@ -1,4 +1,4 @@
-const iniitalState: Item = { id: '', name: 'noname' };
+/*const iniitalState: Item = { id: '', name: 'noname' };
 
 export function RootState(state = iniitalState, action) {
     switch(action.type) {
@@ -7,7 +7,7 @@ export function RootState(state = iniitalState, action) {
     }
 }
 
-/*function modifierItem(state = iniitalState, action) {
+function modifierItem(state = iniitalState, action) {
     switch(action.type) {
         case 'increment':
             return { ...state, value: state.value }

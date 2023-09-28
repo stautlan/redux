@@ -11,7 +11,7 @@ const initialState: State = {
 };
 
 interface IMessage {
-
+    //payload: string;
 }
 
 export const MessagesSlice = createSlice({
