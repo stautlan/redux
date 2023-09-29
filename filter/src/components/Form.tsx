@@ -62,10 +62,13 @@ export const Form = () => {
           <label htmlFor='searchFor'>Найти: </label>
           <input type='text' id={state.id} onChange={onChangeFilterHandler} />
         </form>
-        <form onSubmit={event => event.preventDefault()}>
+        {/* <form onSubmit={event => event.preventDefault()}> */}
+        <div className={state.text.length>0?'':'hide'}>
             <input type="text" id={state.id} value={state.text} onChange={onChangeHandler} />
             <button onClick={() => handleEditItem(state.id, state.text)}>Изменить</button>
-        </form>
+        </div>
+        <br />
+        {/* </form> */}
         <input type='text' value={insertItem} placeholder='Введите значение' onChange={onInsertItemHandler} />
       <button onClick={() => insertItem && handleAddItem(insertItem)}>Добавить элемент</button>
       <h2>Список элементов</h2>
