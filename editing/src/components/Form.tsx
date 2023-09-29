@@ -41,12 +41,15 @@ export const Form = () => { //: React.FC = () => {
 
     return (
         <div>
-            <form onSubmit={event => event.preventDefault()}>
-                <input type="text" id={state.id} value={state.text} onChange={onChangeHandler} />
-                <button onClick={() => handleEditItem(state.id, state.text)}>Изменить</button>
-            </form>
+            {/* <form onSubmit={event => event.preventDefault()}> */}
+            <div className={state.text.length>0?'':'hide'}>
+              <input type="text" id={state.id} value={state.text} onChange={onChangeHandler} />
+              <button onClick={() => handleEditItem(state.id, state.text)}>Изменить</button>
+            </div>
+            <br /> 
+            {/* </form> */}
             <input type='text' value={insertItem} placeholder='Введите значение' 
-            onChange={onInsertItemHandler} />
+              onChange={onInsertItemHandler} />
             <button onClick={() => insertItem && handleAddItem(insertItem)}>Добавить элемент</button>
             <h2>Список элементов</h2>
             <ul>

@@ -25,19 +25,19 @@ interface DeleteItemAction {
 export type Actions = AddItemAction | EditItemAction | DeleteItemAction;
 
 export const addItem = (text: string): AddItemAction => ({
-    type: ActionTypes.ADD_ELEMENT,
-    payload: text,
-  });
-  
-  export const updateItem = (id: string, text: string): EditItemAction => ({
-    type: ActionTypes.UPDATE_ELEMENT,
-    payload: {
-      id,
-      text,
-    },
-  });
-  
-  export const deleteItem = (id: string): DeleteItemAction => ({
-    type: ActionTypes.DELETE_ELEMENT,
-    payload: id,
-  });
+  type: ActionTypes.ADD_ELEMENT,
+  payload: text,
+});
+
+export const updateItem = (id: string, text: string): EditItemAction => ({
+  type: ActionTypes.UPDATE_ELEMENT,
+  payload: {
+    id,
+    text,
+  },
+});
+
+export const deleteItem = (id: string): DeleteItemAction => ({
+  type: ActionTypes.DELETE_ELEMENT,
+  payload: id,
+});
